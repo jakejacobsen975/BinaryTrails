@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start menu.unity
+    guid: c53c1d5b9b19d0945ae54c29a4707fff
+  - enabled: 1
+    path: Assets/Scenes/Desert.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Binary level.unity
+    guid: d01e6e262b4bc114e972a4aaba7eb6bf
+  - enabled: 1
+    path: Assets/Scenes/Sorting level.unity
+    guid: c94a620ddea4fef47b993d76cdc7a5f5
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: fcea56a04a98618498c4fa8602811d7f
+  - enabled: 1
+    path: Assets/Scenes/BigO.unity
+    guid: d50895b2ab8fa454f98eae029642cf73
+  - enabled: 1
+    path: Assets/Scenes/Trees.unity
+    guid: e666a11eff96f054c9f37f00ebc9275f
+  m_configObjects: {}
