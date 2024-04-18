@@ -1,3 +1,3 @@
 # BinaryTrails
 
-### Here is linked all of the source code, I was unable to link the whole project because of its scale. However, every line of code that was written is in both of these folders.
+### Most of the code is in the Binary/Desert scripts and menu folders, although there was some code that had to be placed directly in the Assets folder because of the way that the packages are implemented.
