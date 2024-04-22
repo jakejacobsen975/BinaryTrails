@@ -39,7 +39,7 @@ public class Enemy_AI : MonoBehaviour{
     public float speed = 400f;
     public float nextWaypointDistance = 3f;
 
-    public float spriteChangeDelay = 0.1f; // Adjust this value as needed to control the speed of sprite changes
+    public float spriteChangeDelay = 0.1f; 
 
     float lastSpriteChangeTime = 0f;
 
@@ -130,7 +130,7 @@ void Update()
         isPlayingAnimation = true;
         foreach (Sprite sprite in attackSprites){
             spriteRenderer.sprite = sprite;
-            yield return new WaitForSeconds(.3f); // Use the same delay as the other sprite changes
+            yield return new WaitForSeconds(.3f); 
         }
         currentState = State.idle;
         isPlayingAnimation = false;
@@ -206,7 +206,7 @@ void SetMovingSprite()
         if (Time.time - lastSpriteChangeTime > spriteChangeDelay)
         {
             int totalFrames = (int)(Time.time * frameRate);
-            int frame = totalFrames % Idle.Count; // Assuming Idle sprites are used when there is no specific direction
+            int frame = totalFrames % Idle.Count; 
             spriteRenderer.sprite = Idle[frame];
             lastSpriteChangeTime = Time.time;
         }
