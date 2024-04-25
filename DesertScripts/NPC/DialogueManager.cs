@@ -17,30 +17,32 @@ public class DialogueManager : MonoBehaviour{
 
     public BulletDisplay bulletDisplay;
 
+    // the commented out code is from https://www.youtube.com/watch?v=_nRzoTzeyxU
 
-    Queue<string> sentences;
-    void Start(){
-        sentences = new Queue<string>();
-    }
-    public void StartDialogue(Dialogue dialogue){
-        if(dialogue.name != null){
-            nameText.text = dialogue.name;
-        }
+    
+    // Queue<string> sentences;
+    // void Start(){
+    //     sentences = new Queue<string>();
+    // }
+    // public void StartDialogue(Dialogue dialogue){
+    //     if(dialogue.name != null){
+    //         nameText.text = dialogue.name;
+    //     }
 
-        sentences.Clear();
+    //     sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences){
-            sentences.Enqueue(sentence);
-        }
+    //     foreach (string sentence in dialogue.sentences){
+    //         sentences.Enqueue(sentence);
+    //     }
 
-        DisplayNexSentence();
-    }
+    //     DisplayNexSentence();
+    // }
     public void DisplayNexSentence(){
-        if (sentences.Count == 0){
-            EndDialogue();
-            return;
-        }
-        string sentence = sentences.Dequeue();
+        // if (sentences.Count == 0){
+        //     EndDialogue();
+        //     return;
+        // }
+        // string sentence = sentences.Dequeue();
         if (sentences.Count == 0){
             if(player.hasGun){
                 EndDialogue();
@@ -62,13 +64,13 @@ public class DialogueManager : MonoBehaviour{
             giveItem.OpenClose(false);
         }
     }
-    IEnumerator TypeSentence( string sentence){
-        dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray()){
-            dialogueText.text += letter;
-            yield return null;
-        }
-    }
+    // IEnumerator TypeSentence( string sentence){
+    //     dialogueText.text = "";
+    //     foreach (char letter in sentence.ToCharArray()){
+    //         dialogueText.text += letter;
+    //         yield return null;
+    //     }
+    // }
 
    
 }

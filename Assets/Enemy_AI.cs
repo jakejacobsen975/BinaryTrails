@@ -59,25 +59,28 @@ public class Enemy_AI : MonoBehaviour{
     Seeker seeker;
     Rigidbody2D rb;
 
+    // the commented out code is from https://www.youtube.com/watch?v=jvtFUfJ6CP8&list=WL&index=26&t=185s
+    // however some of the code is outdated and I had to figure out how to update it 
+
     void Start(){
-        seeker = GetComponent<Seeker>();
-        rb = GetComponent<Rigidbody2D>();
+        // seeker = GetComponent<Seeker>();
+        // rb = GetComponent<Rigidbody2D>();
 
-        InvokeRepeating("UpdatePath",0f,0.25f);
+        // InvokeRepeating("UpdatePath",0f,0.25f);
     }
-    void OnPathComplete(Pathfinding.Path p){
-        if(!p.error){
-            path = p;
-            currentWaypoint = 0;
+    // void OnPathComplete(Pathfinding.Path p){
+    //     if(!p.error){
+    //         path = p;
+    //         currentWaypoint = 0;
 
-        }
-    }
-    void UpdatePath(){
-        if(seeker.IsDone()){
-            seeker.StartPath(rb.position,target.position, OnPathComplete);
-        }
+    //     }
+    // }
+    // void UpdatePath(){
+    //     if(seeker.IsDone()){
+    //         seeker.StartPath(rb.position,target.position, OnPathComplete);
+    //     }
 
-    }
+    // }
     // Update is called once per frame
 void Update()
 {   
@@ -137,31 +140,31 @@ void Update()
 
     }
     void checkPath(){
-        if (path == null)
-            return;
+        // if (path == null)
+        //     return;
 
-        if (currentWaypoint >= path.vectorPath.Count)
-        {
-            reachedEndOfPath = true;
-            return;
-        }
-        else
-        {
-            reachedEndOfPath = false;
-        }
+        // if (currentWaypoint >= path.vectorPath.Count)
+        // {
+        //     reachedEndOfPath = true;
+        //     return;
+        // }
+        // else
+        // {
+        //     reachedEndOfPath = false;
+        // }
         
 
-        direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+        // direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
-        Vector2 force = direction * speed * Time.deltaTime;
+        // Vector2 force = direction * speed * Time.deltaTime;
 
-        rb.AddForce(force);
+        // rb.AddForce(force);
 
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+        // float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if (distance < nextWaypointDistance){
-            currentWaypoint++;
-        }
+        // if (distance < nextWaypointDistance){
+        //     currentWaypoint++;
+        // }
             
 
         if(path.vectorPath.Count > 12){

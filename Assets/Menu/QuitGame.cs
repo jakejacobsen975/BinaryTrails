@@ -11,10 +11,11 @@ public class QuitGame : MonoBehaviour
         button.onClick.AddListener(exitGame);
         
     }
-    void exitGame(){
-        Debug.Log("Player Quit");
-        Application.Quit();
-    }
+    // commented code is from https://www.youtube.com/watch?v=zc8ac_qUXQY&list=WL&index=32
+    // void exitGame(){
+    //     Debug.Log("Player Quit");
+    //     Application.Quit();
+    // }
    
     
 }

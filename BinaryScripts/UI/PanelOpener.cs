@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PanelOpener : MonoBehaviour
 {
-    // Start is called before the first frame update
    public GameObject Panel;
 
    public void OpenPanel(){

@@ -38,62 +38,56 @@ public class SpriteSheets : MonoBehaviour
     public List<Sprite> FemaleIdleSprites;
 
     public List<Sprite> FemaleDeath;
-    void Start()
-    {
-        
-    }
+   
+    // I used https://www.youtube.com/watch?v=NQN3rYGqqP8&list=WL&index=21
+    // for his code the segments that I used are commented out
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public List<Sprite> GetSpriteDirection( Vector2 direction,Gender gender){
         List<Sprite> selectedSprites = null;
 
-            if (direction.y > 0){// north
-                if (Math.Abs(direction.x) > 0){// east or west
-                    if(gender == Gender.Female){
-                        selectedSprites = neFemaleSprites;
-                    }else{
-                        selectedSprites = neMaleSprites;
-                    }
+            // if (direction.y > 0){// north
+            //     if (Math.Abs(direction.x) > 0){// east or west
+            //         if(gender == Gender.Female){
+            //             selectedSprites = neFemaleSprites;
+            //         }else{
+            //             selectedSprites = neMaleSprites;
+            //         }
                     currentDirection = 1;
                 }
-                else{
-                    if(gender == Gender.Female){
-                        selectedSprites = nFemaleSprites;
-                    }else{
-                        selectedSprites = nMaleSprites;
-                    }
+                // else{
+                //     if(gender == Gender.Female){
+                //         selectedSprites = nFemaleSprites;
+                //     }else{
+                //         selectedSprites = nMaleSprites;
+                //     }
                     currentDirection = 0;
                 }
             }
-            else if (direction.y < 0){// south
-                if (Math.Abs(direction.x) > 0){// east or west
-                    if(gender == Gender.Female){
-                        selectedSprites = seFemaleSprites;
-                    }else{
-                        selectedSprites = seMaleSprites;
-                    }
+            // else if (direction.y < 0){// south
+            //     if (Math.Abs(direction.x) > 0){// east or west
+            //         if(gender == Gender.Female){
+            //             selectedSprites = seFemaleSprites;
+            //         }else{
+            //             selectedSprites = seMaleSprites;
+            //         }
                     currentDirection = 3;
                 }
-                else{
-                    if(gender == Gender.Female){
-                        selectedSprites = sFemaleSprites;
-                    }else{
-                        selectedSprites = sMaleSprites;
-                    }
+                // else{
+                //     if(gender == Gender.Female){
+                //         selectedSprites = sFemaleSprites;
+                //     }else{
+                //         selectedSprites = sMaleSprites;
+                //     }
                     currentDirection = 4;
                 }
             }
-            else{
-                if (Math.Abs(direction.x) > 0){// east or west
-                    if(gender == Gender.Female){
-                        selectedSprites = eFemaleSprites;
-                    }else{
-                        selectedSprites = eMaleSprites;
-                    }
+            // else{
+            //     if (Math.Abs(direction.x) > 0){// east or west
+            //         if(gender == Gender.Female){
+            //             selectedSprites = eFemaleSprites;
+            //         }else{
+            //             selectedSprites = eMaleSprites;
+            //         }
                     currentDirection = 2;
                 }
             }

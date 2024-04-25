@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InfoBlock : MonoBehaviour
 {   
-    // for som reason in the prefab I can't reset the PanelOpener so just open the gameobject and search PannelOpener and add the script
+    // for some reason in the prefab I can't reset the PanelOpener so just open the gameobject and search PannelOpener and add the script
     public SpriteRenderer spriteRenderer;
     
     public PanelOpener infoPanel;

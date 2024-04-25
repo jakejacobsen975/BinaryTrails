@@ -50,7 +50,7 @@ public class TopDownController : MonoBehaviour {
    void Start() {
         shootingBehavior = GetComponent<ShootingBehavior>();
         if (shootingBehavior == null) {
-            Debug.LogError("ShootingBehavior component not found on the same GameObject.");
+            Debug.LogError("ShootingBehavior component not found on the same GameObject."); chat
         }
         LoadGame();
         int newNumberBullets = 0;
@@ -129,43 +129,43 @@ public class TopDownController : MonoBehaviour {
     
 
 
-
+    // I used https://www.youtube.com/watch?v=NQN3rYGqqP8&list=WL&index=21
+    // for his code the segments that I used are commented out
     private void HandleWalkingNIdle(){
         // handle direction
-        if (!spriteRenderer.flipX && direction.x < 0){
-            spriteRenderer.flipX = true;
-        }
-        else if (spriteRenderer.flipX && direction.x > 0){
-            spriteRenderer.flipX = false;
-        }
+        // if (!spriteRenderer.flipX && direction.x < 0){
+        //     spriteRenderer.flipX = true;
+        // }
+        // else if (spriteRenderer.flipX && direction.x > 0){
+        //     spriteRenderer.flipX = false;
+        // }
 
         List<Sprite> directionSprites = spriteSheet.GetSpriteDirection(direction,gender);
         
-        if (directionSprites != null ){
-            int totalFrames = (int)(Time.time * frameRate);
-            int frame = totalFrames % directionSprites.Count;
+        // if (directionSprites != null ){
+        //     int totalFrames = (int)(Time.time * frameRate);
+        //     int frame = totalFrames % directionSprites.Count;
 
-            spriteRenderer.sprite = directionSprites[frame];
+        //     spriteRenderer.sprite = directionSprites[frame];
         }else{
             spriteRenderer.sprite = spriteSheet.getIdleSprite(gender);
         }
         
     }
     bool isWalkAble(){
-    // Calculate the next position based on the current position and direction
     Vector2 nextPosition = (Vector2)transform.position + Direction * 0.2f;
 
-    // Check if there is an overlap at the next position with objects on the specified layer
     if (Physics2D.OverlapCircle(nextPosition, 0.2f, objectsLayer) != null){
         return false;
     }
     return true;
     }
-    public void SaveGame() {
-        SaveData.SavePlayerData(this);
-    }
-    public void LoadGame( ) {
-        PlayerData data = SaveData.loadPlayer();
+    // the commented out code is taken from https://www.youtube.com/watch?v=XOjd_qU2Ido&list=WL&index=30&t=2s
+    // public void SaveGame() {
+    //     SaveData.SavePlayerData(this);
+    // }
+    // public void LoadGame( ) {
+    //     PlayerData data = SaveData.loadPlayer();
 
         if (data != null){
             completedLevels = data.completedLevels;

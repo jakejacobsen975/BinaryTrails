@@ -17,16 +17,8 @@ public class EnemyHealth : MonoBehaviour
         healthBar.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-		// if (Input.GetKeyDown(KeyCode.Space))
-		// {
-        //     if(!healthBar.isActiveAndEnabled)
-        //     healthBar.gameObject.SetActive(true);
-		// 	TakeDamage(5);
-		// }
-    }
+
+    
 
 	public void TakeDamage(int damage)
 	{

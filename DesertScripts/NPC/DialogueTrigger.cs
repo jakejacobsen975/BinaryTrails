@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour {
-    public Dialogue dialogue;
-    public DialogueManager dialogueManager; // Add this line
+    // this code is from https://www.youtube.com/watch?v=_nRzoTzeyxU
 
-    public GameObject Object;
+// public class DialogueTrigger : MonoBehaviour {
+//     public Dialogue dialogue;
+//     public DialogueManager dialogueManager; 
 
-    public void TriggerDialogue() {
+//     public GameObject Object;
 
-        Object.SetActive(true);
-        dialogueManager.StartDialogue(dialogue);
-    }
-}
+//     public void TriggerDialogue() {
+
+//         Object.SetActive(true);
+//         dialogueManager.StartDialogue(dialogue);
+//     }
+// }

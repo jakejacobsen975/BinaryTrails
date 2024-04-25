@@ -5,33 +5,34 @@ using System.Data.Common;
 using UnityEngine.Analytics;
 
 public static class SaveData {
+    // the commented out code is taken from https://www.youtube.com/watch?v=XOjd_qU2Ido&list=WL&index=30&t=2s
    
-    public static void SavePlayerData (TopDownController player){
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/BinaryTrails.save";
-        FileStream stream = new(path, FileMode.Create);
+    // public static void SavePlayerData (TopDownController player){
+    //     BinaryFormatter formatter = new BinaryFormatter();
+    //     string path = Application.persistentDataPath + "/BinaryTrails.save";
+    //     FileStream stream = new(path, FileMode.Create);
         
-        PlayerData data = new(player);
-        formatter.Serialize(stream, data);
-        stream.Close();
+    //     PlayerData data = new(player);
+    //     formatter.Serialize(stream, data);
+    //     stream.Close();
 
-    }
+    // }
 
-    public static PlayerData loadPlayer (){
-         string path = Application.persistentDataPath + "/BinaryTrails.save";
-         if(File.Exists(path)){
-            BinaryFormatter formatter = new();
-            FileStream stream = new(path, FileMode.Open);
+    // public static PlayerData loadPlayer (){
+    //      string path = Application.persistentDataPath + "/BinaryTrails.save";
+    //      if(File.Exists(path)){
+    //         BinaryFormatter formatter = new();
+    //         FileStream stream = new(path, FileMode.Open);
 
-            PlayerData data = formatter.Deserialize(stream) as PlayerData;
-            stream.Close();
+    //         PlayerData data = formatter.Deserialize(stream) as PlayerData;
+    //         stream.Close();
             
-            return data;
-         }else{
-            Debug.LogWarning("Save file not found in"+ path);
-            return null;
-         }
-    }
+    //         return data;
+    //      }else{
+    //         Debug.LogWarning("Save file not found in"+ path);
+    //         return null;
+    //      }
+    // }
     public static void SavePortalName (string portalName){
         PlayerData data = loadPlayer();
         BinaryFormatter formatter = new BinaryFormatter();

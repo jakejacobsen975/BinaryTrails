@@ -8,7 +8,8 @@ public class OptionMenu : MonoBehaviour{
 
     public GameObject optionsMenuFirstButton, controllerMenuFirstButton, keyboardInputsFirstButton, controllerInputsBackButton;
     
-
+    // I learned how to set buttons for the controller from https://www.youtube.com/watch?v=SXBgBmUcTe0&list=WL&index=34&t=612s
+    // but the logic is my own.
     void Update(){
         if(Time.timeScale == 1f && (Input.GetButton("Cancel") || Input.GetButton("Menu"))){
             optionsMenu.SetActive(true);

@@ -44,7 +44,6 @@ public class traveler : MonoBehaviour
             Vector3 playerPosition = collision.gameObject.transform.position;
             Vector3 travelerPosition = transform.position;
 
-            // Determine the position of the player relative to the traveler
             if (playerPosition.x < (travelerPosition.x - tolerance)){
                 spriteRenderer.sprite = sprites[0];
             }

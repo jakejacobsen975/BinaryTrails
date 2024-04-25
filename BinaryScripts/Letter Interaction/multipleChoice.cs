@@ -8,7 +8,6 @@ public class multipleChoice : MonoBehaviour{
 
     public bool correctAnswerChosen = false;
 
-    // Update is called once per frame
     
 }
 

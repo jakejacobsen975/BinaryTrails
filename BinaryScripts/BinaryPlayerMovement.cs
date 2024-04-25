@@ -40,15 +40,15 @@ public class BinaryPlayerMovement : MonoBehaviour{
         PlayerData data = SaveData.loadPlayer();
         gender = data.gender;
     }
-
+    // the commented out segments are from https://www.youtube.com/watch?v=BLfNP4Sc_iA&list=WL&index=26&t=205s
     void Update(){
-        move = Input.GetAxis("Horizontal");
+        // move = Input.GetAxis("Horizontal");
        
-        body.velocity =  new Vector2(walkSpeed * move, body.velocity.y);
+        // body.velocity =  new Vector2(walkSpeed * move, body.velocity.y);
 
-        if(Input.GetButtonDown("Jump") && !isJumping && Time.timeScale == 1f){
-            body.AddForce(new Vector2(body.velocity.x,jump));
-        }
+        // if(Input.GetButtonDown("Jump") && !isJumping && Time.timeScale == 1f){
+        //     body.AddForce(new Vector2(body.velocity.x,jump));
+        // }
             
         
         HandleAnimations();
@@ -128,9 +128,9 @@ public class BinaryPlayerMovement : MonoBehaviour{
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("Ground")){
-            isJumping = false;
-        }
+        // if(collision.gameObject.CompareTag("Ground")){
+        //     isJumping = false;
+        // }
         if(collision.gameObject.CompareTag("Enemy")){
             Enemy_AI_binary enemyScript = collision.gameObject.GetComponent<Enemy_AI_binary>();
             CheckAndDealDamage(enemyScript);
