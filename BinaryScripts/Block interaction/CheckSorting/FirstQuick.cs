@@ -62,10 +62,10 @@ public class FirstQuick : MonoBehaviour
                     if (both == 2){
                         currentStep++;
                         if (currentStep >= sortingSteps.Count){
-                            currentStep = 0; // Reset to the first step if all steps are completed
+                            currentStep = 0; 
                         }
 
-                        // Update numberBlocks to the next step
+                       
                         for (int j = 0; j < numberBlocks.Count; j++){
                             numberBlocks[j].currentBlock = sortingSteps[currentStep][j];
                         }
@@ -78,7 +78,7 @@ public class FirstQuick : MonoBehaviour
                     }else if (both < 2 && greenCount >= 2){
                         currentStep = 0;
                         StartCoroutine(ResetBlocksAfterDelay());
-                        // set all to incorrect and go back to step 1
+                        
                     }
                 }
 
@@ -114,17 +114,17 @@ public class FirstQuick : MonoBehaviour
     {
         if (list1.Count != list2.Count)
         {
-            return false; // Lists have different lengths
+            return false; 
         }
 
         for (int i = 0; i < list1.Count; i++)
         {
             if (list1[i] != list2[i])
             {
-                return false; // Elements at the same position are different
+                return false; 
             }
         }
 
-        return true; // All elements are the same and in the same order
+        return true; 
     }
 }
