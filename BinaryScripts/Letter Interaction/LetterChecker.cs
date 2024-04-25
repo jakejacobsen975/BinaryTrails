@@ -27,3 +27,4 @@ public class LetterChecker : MonoBehaviour
         }
     }
 }
+// binary block interaction

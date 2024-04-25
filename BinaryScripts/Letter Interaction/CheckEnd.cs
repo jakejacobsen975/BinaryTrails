@@ -19,7 +19,7 @@ public class CheckEnd : MonoBehaviour
         AllCorrect = true;
         foreach(LetterChecker letter in letterBlocks){
             if(!letter.IsCorrectBlock){
-                // AllCorrect = false;
+                AllCorrect = false;
                 break;
             }
         }
@@ -32,3 +32,4 @@ public class CheckEnd : MonoBehaviour
         }
     }
 }
+// binary block interaction

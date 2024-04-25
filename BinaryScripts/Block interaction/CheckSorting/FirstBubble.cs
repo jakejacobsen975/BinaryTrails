@@ -56,8 +56,8 @@ public class FirstSort : MonoBehaviour
                     if (numberBlocks[i].currentState == NumberInteraction.blockState.GREEN ){
                         greenCount++;
                         if (numberBlocks[i].currentBlock != nextStep[i]){
-                        both++;
-                    }
+                            both++;
+                        }
                     }
                     if (both == 2){
                         currentStep++;

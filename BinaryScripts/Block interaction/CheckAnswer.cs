@@ -39,10 +39,8 @@ public class CheckAnswer : MonoBehaviour
         float result = 0.0f;
         int exponent = 0;
 
-        for (int i = sequence1.Count - 1; i >= 0; i--)
-        {
-            if (sequence1[i] == 1)
-            {
+        for (int i = sequence1.Count - 1; i >= 0; i--){
+            if (sequence1[i] == 1){
                 result += Mathf.Pow(2, exponent);
             }
 
@@ -55,3 +53,4 @@ public class CheckAnswer : MonoBehaviour
         return BlocksCorrect;
     }
 }
+// binary block interaction
