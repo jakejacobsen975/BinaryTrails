@@ -8,6 +8,8 @@ Drawing from my love for classic retro games like Mario and Harvest Moon, I craf
 The other half presents a thrilling 2D platformer experience, where players tackle computer science problems in a dynamic and interactive manner. By intertwining gameplay with educational content, the game offers a compelling way to learn and apply key concepts, empowering players to approach challenges creatively and persistently.
 
 In essence, my game seeks to capture the essence of classic gaming experiences while introducing players to the exciting world of computer science, making learning both accessible and enjoyable for all.
+## Additional info
+
 ### Most of the code is in the Binary/Desert scripts and Assets/Menu folders, although there was some code that had to be placed directly in the Assets folder because of the way that the packages are implemented.
 
 ### All the sprites that I made and used are located in the Assets folder
